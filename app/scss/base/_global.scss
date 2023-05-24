@@ -97,4 +97,22 @@ body {
 	font-size: rem(44);
 	line-height: lh(52, 44);
 	color: var(--white-color);
+	@include reset;
+
+	&:not(:last-child) {
+		margin-bottom: 53px;
+
+		@media (max-width: 1024px) {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.second-title {
+	font-family: var(--main-font);
+	font-weight: 700;
+	font-size: rem(21);
+	line-height: lh(24, 21);
+	color: var(--white-color);
+	@include reset;
 }

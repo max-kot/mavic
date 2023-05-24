@@ -26,15 +26,14 @@
 	}
 
 	&__title {
-		@include reset;
-		&:not(:last-child) {
-			margin-bottom: 55px;
-		}
 	}
 
 	&__text {
 		padding-left: 30px;
-
+		
+		@media (max-width: 1024px) {
+			padding-left: unset;
+		}
 		& > * {
 			@include reset;
 			&:not(:last-child) {
@@ -93,8 +92,8 @@
 	&__arrow {
 		position: absolute;
 		z-index: 2;
-		bottom: -42px;
-		right: 15px;
+		bottom: -40px;
+		right: 0px;
 		width: 60px;
 		height: 48px;
 		border: none;
@@ -104,7 +103,8 @@
 		padding: 12px;
 
 		@media (max-width: 1440px) {
-			bottom: 80px;
+			bottom: 79px;
+			right: 15px;
 		}
 
 		svg {
@@ -121,7 +121,11 @@
 	}
 
 	&__arrow-prev {
-		right: 75px;
+		right: 60px;
+
+		@media (max-width: 1440px) {
+			right: 75px;
+		}
 	}
 }
 .slide {

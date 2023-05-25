@@ -18,9 +18,9 @@
 			top: -2000%;
 			left: 0;
 			width: 100%;
-			height: 76px;
+			height: 77px;
 			background-color: rgba(#1c1c1c, 0.9);
-			transition: top 0.5s;
+			transition: top 0.3s;
 		}
 
 		&.active {
@@ -73,9 +73,6 @@
 		color: var(--white-color);
 		position: relative;
 
-		@media (max-width: 1024px) {
-			display: none;
-		}
 		&::after {
 			content: "";
 			position: absolute;
@@ -104,7 +101,7 @@
 .menu {
 	@media (max-width: 1024px) {
 		position: absolute;
-		top: -1000%;
+		top: -2000%;
 		left: 0;
 		width: 100%;
 		background-color: rgba(#1c1c1c, 0.9);
@@ -172,8 +169,7 @@
 		}
 	}
 
-	&__phone-link {
-		display: none;
+	.header__phone-link {
 		@media (max-width: 1024px) {
 			display: block;
 		}
@@ -191,7 +187,7 @@
 	@media (max-width: 1024px) {
 		display: block;
 	}
-
+	
 	span {
 		position: absolute;
 		top: 50%;
@@ -200,6 +196,8 @@
 		height: 2px;
 		transform: translateY(-50%);
 		background-color: var(--white-color);
+		opacity: 1;
+		transition: opacity 0.5s;
 	}
 
 	&::before,
@@ -210,6 +208,7 @@
 		height: 2px;
 		right: 0;
 		background-color: var(--white-color);
+		transition: all 0.5s;
 	}
 
 	&::before {
@@ -219,6 +218,26 @@
 	&::after {
 		bottom: 0;
 		width: 65%;
+	}
+
+	&.active {
+		span {
+			opacity: 0;
+		}
+
+		&::before,
+		&::after {
+			top: 50%;
+		}
+		&::before {
+			transform: rotate(45deg);
+		}
+	
+		&::after {
+			transform: rotate(-45deg);
+			width: 100%;
+			bottom: unset;
+		}
 	}
 }
 

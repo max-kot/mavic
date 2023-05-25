@@ -620,11 +620,11 @@ body {
     top: -2000%;
     left: 0;
     width: 100%;
-    height: 76px;
+    height: 77px;
     background-color: rgba(28, 28, 28, 0.9);
-    -webkit-transition: top 0.5s;
-    -o-transition: top 0.5s;
-    transition: top 0.5s;
+    -webkit-transition: top 0.3s;
+    -o-transition: top 0.3s;
+    transition: top 0.3s;
   }
   .header.active::before {
     top: 0;
@@ -675,11 +675,6 @@ body {
   color: var(--white-color);
   position: relative;
 }
-@media (max-width: 1024px) {
-  .header__phone-link {
-    display: none;
-  }
-}
 .header__phone-link::after {
   content: "";
   position: absolute;
@@ -702,7 +697,7 @@ body {
 @media (max-width: 1024px) {
   .menu {
     position: absolute;
-    top: -1000%;
+    top: -2000%;
     left: 0;
     width: 100%;
     background-color: rgba(28, 28, 28, 0.9);
@@ -777,11 +772,8 @@ body {
 .menu__link:hover::after, .menu__link:focus::after {
   width: 100%;
 }
-.menu__phone-link {
-  display: none;
-}
 @media (max-width: 1024px) {
-  .menu__phone-link {
+  .menu .header__phone-link {
     display: block;
   }
 }
@@ -809,6 +801,10 @@ body {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   background-color: var(--white-color);
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 .burger-menu::before, .burger-menu::after {
   content: "";
@@ -817,6 +813,9 @@ body {
   height: 2px;
   right: 0;
   background-color: var(--white-color);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
 }
 .burger-menu::before {
   top: 0;
@@ -824,6 +823,24 @@ body {
 .burger-menu::after {
   bottom: 0;
   width: 65%;
+}
+.burger-menu.active span {
+  opacity: 0;
+}
+.burger-menu.active::before, .burger-menu.active::after {
+  top: 50%;
+}
+.burger-menu.active::before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.burger-menu.active::after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 100%;
+  bottom: unset;
 }
 
 body.scroll-down .header {

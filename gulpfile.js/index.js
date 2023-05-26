@@ -57,7 +57,7 @@ const dev = app.gulp.series(
 	scripts,
 	images,
 	sprite,
-	fonts,
+	//fonts,
 	app.gulp.parallel(
 		watcher,
 		server,

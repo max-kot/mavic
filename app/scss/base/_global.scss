@@ -99,11 +99,16 @@ body {
 	color: var(--white-color);
 	@include reset;
 
+	@media (max-width: 768px) {
+		font-size: rem(34);
+		text-align: center;
+	}
+
 	&:not(:last-child) {
 		margin-bottom: 53px;
 
 		@media (max-width: 1024px) {
-			margin-bottom: 30px;
+			margin-bottom: 20px;
 		}
 	}
 }

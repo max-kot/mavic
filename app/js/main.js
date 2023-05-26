@@ -2,4 +2,5 @@
 import "./modules/slick.js";
 import "./modules/menu.js";
 import "./modules/mover.js";
+import "./modules/spoiler.js";
 

@@ -13,8 +13,10 @@
 		flex-wrap: wrap;
 		padding-top: 12px;
 		gap: 100px 0px;
+		padding-left: 30px;
 
 		@media (max-width: 1024px) {
+			padding-left: unset;
 			flex-direction: column;
 		}
 

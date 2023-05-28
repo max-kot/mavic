@@ -22,7 +22,12 @@
 
 	&__content {
 		max-width: 690px;
+		padding-left: 30px;
 		padding-right: 62px;
+
+		@media (max-width: 1024px) {
+			padding-left: unset;
+		}
 
 		@media (max-width: 768px) {
 			padding-right: unset;

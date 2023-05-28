@@ -16,8 +16,6 @@
 	&__image {
 		position: absolute;
 		top: 20%;
-		left: 50%;
-		transform: translateX(-50%);
 		height: 199px;
 		width: 668px;
 		z-index: -1;
@@ -39,14 +37,16 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 150px var(--gap);
+		padding-left: 30px;
 
 		@media (max-width: 1400px) {
 			gap: 80px var(--gap);
 		}
-
+		
 		@media (max-width: 1024px) {
 			--gap: 30px;
 			row-gap: var(--gap);
+			padding-left: unset;
 		}
 		@media (max-width: 500px) {
 			--flex-column: 1;
@@ -54,7 +54,7 @@
 	}
 
 	&__item {
-		flex: 0 1 var(--flex-width);
+		flex: 1 1 var(--flex-width);
 		
 	}
 }
